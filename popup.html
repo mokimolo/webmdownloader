@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select WebMs to Download</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 10px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        #webm-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        #webm-list li {
+            background-color: #fff;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        video {
+            max-width: 150px; /* Smaller preview size */
+            margin-right: 10px;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            margin-top: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        label {
+            flex-grow: 1;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <ul id="webm-list"></ul>
+    <button id="download">Download Selected</button>
+    <button id="download-all">Download All</button>
+    <script src="popup.js"></script>
+</body>
+</html>
+<script src="https://unpkg.com/@ffmpeg/ffmpeg@0.11.6/dist/ffmpeg.min.js"></script>
